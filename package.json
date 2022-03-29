@@ -1,23 +1,25 @@
 {
   "name": "18-social-network-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Mongoose back-end project",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node utils/seed",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ayacomputer/18-Social-Network-API.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ayacomputer/18-Social-Network-API/issues"
   },
   "homepage": "https://github.com/ayacomputer/18-Social-Network-API#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.9"
   }
