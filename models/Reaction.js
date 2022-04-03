@@ -10,6 +10,8 @@ const reactionSchema = new Schema(
         reactionBody: {
             type: String,
             required: [true, 'Please enter your message.'],
+            trim: true,
+            minlength: 1,
             maxlength: 280
         },
         username: {
@@ -24,7 +26,6 @@ const reactionSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: true,
             getter: true,
         },
         id: false,
