@@ -1,8 +1,10 @@
-const { User, Thought, Reaction } = require('../models');
+const { User, Thought } = require('../models');
 
 module.exports = {
     getThoughts(req, res) {
-        Thought.find()
+        Thought.find({})
+            .select('-__v')
+            .sort({ _id: -1 })
             .then((thoughts) => res.json(thoughts))
             .catch((err) => res.status(500).json(err));
     },
@@ -59,7 +61,7 @@ addReaction(req, res) {
     console.log(req.body);
     Thought.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        { $addToSet: { thoughts: req.body } },
+        { $addToSet: { reactions: req.body } },
         { runValidators: true, new: true }
     )
         .then((thought) =>
@@ -75,7 +77,7 @@ addReaction(req, res) {
 removeReaction(req, res) {
     Thought.findOneAndUpdate(
         { _id: req.params.studentId },
-        { $pull: { thought: { thoughtId: req.params.thoughtId } } },
+        { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { runValidators: true, new: true }
     )
         .then((thought) =>
