@@ -1,9 +1,9 @@
-const { User, Thought, Reaction } = require('../models');
+const { User, Thought } = require('../models');
 
 module.exports = {
 
     getUsers(req, res) {
-        User.find({})
+        User.find()
             .populate({
                 path: 'thoughts',
                 select: '-__v'
@@ -12,12 +12,7 @@ module.exports = {
                 path: 'friends',
                 select: '-__v'
             })
-            .then(async (users) => {
-                const userObj = {
-                    users,
-                };
-                return res.json(userObj);
-            })
+            .then((users) => res.json(users))
             .catch((err) => {
                 console.log(err);
                 return res.status(500).json(err);
@@ -43,6 +38,17 @@ module.exports = {
         User.create(req.body)
             .then((user) => res.json(user))
             .catch((err) => res.status(500).json(err));
+    },
+    updateUser(req, res) {
+        User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
+            .then(user => {
+                if (!user) {
+                    res.status(404).json({ message: 'No user found with this id!' });
+                    return;
+                }
+                res.json(user);
+            })
+            .catch(err => res.status(400).json(err));
     },
     deleteUser(req, res) {
         User.findOneAndRemove({ _id: req.params.userId })
