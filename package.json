@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/ayacomputer/18-Social-Network-API#readme",
   "dependencies": {
-    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "moment": "^2.29.1",
     "mongoose": "^6.2.9"
