@@ -40,22 +40,36 @@ This is an API for a social network that uses a NoSQL database so that its websi
 
 
 # Users
-You can create, update and delete the user data. You can find all the data of users as well as find a user by id.  
+You can create, update and delete the user data. <br>
+You can find all the data of users as well as find a user by id. 
+
 ![ProductScreen Shot](./assets/screenshots/users.png)<br>
+
 [Click Here to see the Video](https://drive.google.com/file/d/1zWS9q43QPb1OwmxJ1lGYP42LctBEPVs7/view)
 
 # Friends
+
 You can add and remove friends.
+
 ![ProductScreen Shot](./assets/screenshots/friends.png)<br>
+
 [Click Here to see the Video](https://drive.google.com/file/d/1snspWvu_8iNIsUMij3SLgFMJPxdkVkh_/view)
 
 # Thoughts
-You can create, update and delete the user thoughts. You can find all the data of thoughts as well as find a thought by id.  
+
+You can create, update and delete the user thoughts. <br>
+You can find all the data of thoughts as well as find a thought by id.  
+
 ![ProductScreen Shot](./assets/screenshots/thoughts.png)<br>
+
 [Click Here to see the Video](https://drive.google.com/file/d/1c35_3Pjy8_hDeRxShff4qG5FlNMlLxzi/view)
 
 # Reactions 
+
+You can add reactions to thoughts and remove the reactions.
+
 ![ProductScreen Shot](./assets/screenshots/reactions.png)<br>
+
 [Click Here to see the Video](https://drive.google.com/file/d/1snspWvu_8iNIsUMij3SLgFMJPxdkVkh_/view)
 
 
@@ -76,11 +90,12 @@ To get a local copy up and running follow these simple example steps.
 
  ## Installation
 
- The application will be invoked by using the following command:
+The application will be invoked by using the following command:
 
 `git clone git@github.com:ayacomputer/18-Social-Network-API`
 
-
+How to run the application: 
+[Click here to watch video](https://drive.google.com/file/d/17M4K91NyXEuzXUpWaQHI-xUKPFNJ0y9i/view)
 
 <p align="right">(<a href="#top">back to top</a>)</>
 
