@@ -109,7 +109,7 @@ See LICENSE.txt for more information.
 
 <p align ="right">(<a href="#top">back to top</a>)</>
 
- ## Contact Me
+ ## Contact
 
 Ayako Woollan - ayako.woollan@gmail.com
 
