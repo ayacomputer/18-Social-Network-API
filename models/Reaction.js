@@ -19,9 +19,8 @@ const reactionSchema = new Schema(
             required: [true, 'Please enter your username.']
         },
         createdAt: {
-            type: Date,
-            default: Date.now,
-            get: date => moment(date).format('DD MMM, YYYY [at] hh:mm a')
+            type: String,
+            default: moment(new Date()).format('DD MMM YYYY [at] hh:mm a')
         },
     },
     {
