@@ -3,7 +3,8 @@ const { User, Thought } = require('../models');
 module.exports = {
 
     getUsers(req, res) {
-        User.find()
+        console.log("getting all users")
+        User.find({})
             .populate({
                 path: 'thoughts',
                 select: '-__v'
@@ -19,6 +20,7 @@ module.exports = {
             });
     },
     getSingleUser(req, res) {
+        console.log("getting single user")
         User.findOne({ _id: req.params.userId })
             .select('-__v')
             .lean()
@@ -35,11 +37,13 @@ module.exports = {
             });
     },
     createUser(req, res) {
+        console.log("creating a user")
         User.create(req.body)
             .then((user) => res.json(user))
             .catch((err) => res.status(500).json(err));
     },
     updateUser(req, res) {
+        console.log("updating a user")
         User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(user => {
                 if (!user) {
@@ -51,6 +55,7 @@ module.exports = {
             .catch(err => res.status(400).json(err));
     },
     deleteUser(req, res) {
+        console.log("deleting a user")
         User.findOneAndRemove({ _id: req.params.userId })
             .then((user) =>
                 !user
@@ -74,6 +79,7 @@ module.exports = {
             });
     },
     addFriend(req, res) {
+        console.log("adding a friend")
         User.findOneAndUpdate(
             { _id: params.id },
             { $push: { friends: params.friendId } },
@@ -90,6 +96,7 @@ module.exports = {
     },
 
     removeFriend(req, res) {
+        console.log("removing a friend")
         User.findOneAndUpdate(
             { _id: params.id },
             { $pull: { friends: params.friendId } },
