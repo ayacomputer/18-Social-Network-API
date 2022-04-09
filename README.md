@@ -4,6 +4,7 @@
 ---
 
 # NoSQL Social Network API
+
 <details>  
 <summary>Table of Contents</summary>
 
@@ -36,6 +37,26 @@
 
 
 This is an API for a social network that uses a NoSQL database so that its website can handle large amounts of unstructured data. This application is built with Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the Express.js and Mongoose packages, I used moment.js to format the date. MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data.
+
+
+# Users
+You can create, update and delete the user data. You can find all the data of users as well as find a user by id.  
+![ProductScreen Shot](./assets/screenshots/users.png)<br>
+[Click Here to see the Video](https://drive.google.com/file/d/1zWS9q43QPb1OwmxJ1lGYP42LctBEPVs7/view)
+
+# Friends
+You can add and remove friends.
+![ProductScreen Shot](./assets/screenshots/friends.png)<br>
+[Click Here to see the Video](https://drive.google.com/file/d/1snspWvu_8iNIsUMij3SLgFMJPxdkVkh_/view)
+
+# Thoughts
+You can create, update and delete the user thoughts. You can find all the data of thoughts as well as find a thought by id.  
+![ProductScreen Shot](./assets/screenshots/thoughts.png)<br>
+[Click Here to see the Video](https://drive.google.com/file/d/1c35_3Pjy8_hDeRxShff4qG5FlNMlLxzi/view)
+
+# Reactions 
+![ProductScreen Shot](./assets/screenshots/reactions.png)<br>
+[Click Here to see the Video](https://drive.google.com/file/d/1snspWvu_8iNIsUMij3SLgFMJPxdkVkh_/view)
 
 
 
