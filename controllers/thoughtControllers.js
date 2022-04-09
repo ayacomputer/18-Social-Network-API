@@ -24,7 +24,6 @@ module.exports = {
 
     createThought(req, res) {
         console.log("creating thought")
-        console.log('here is', req.body);
         Thought.create(req.body)
             .then((thought) => res.json(thought))
             .catch((err) => {
