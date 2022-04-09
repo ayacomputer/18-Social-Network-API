@@ -80,7 +80,7 @@ module.exports = {
     removeReaction(req, res) {
         console.log("removing reaction")
         Thought.findOneAndUpdate(
-            { _id: req.params.studentId },
+            { _id: req.params.thoughtId },
             { $pull: { reactions: { reactionId: req.params.reactionId } } },
             { runValidators: true, new: true }
         )
