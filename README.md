@@ -92,9 +92,15 @@ To get a local copy up and running follow these simple example steps.
 
 The application will be invoked by using the following command:
 
-`git clone git@github.com:ayacomputer/18-Social-Network-API`
+```
+git clone git@github.com:ayacomputer/18-Social-Network-API
+```
+Also, please make sure to install npm packages by using the following command:
+```
+npm i 
+```
 
-How to run the application: 
+Then check out how to run the application: 
 [Click here to watch video](https://drive.google.com/file/d/17M4K91NyXEuzXUpWaQHI-xUKPFNJ0y9i/view)
 
 <p align="right">(<a href="#top">back to top</a>)</>
